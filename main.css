@@ -1,0 +1,1655 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+The reset CSS overrides all the style rules applied by the browser stylesheet.
+If you don't want to reset all CSS values then comment the reset rules out*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end of reset style rules---------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+@font-face { font-family: harryp; src: url('fonts/HARRYP__.TTF'); }
+
+
+/* ------- default rule for all elements ------- */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 2em;
+	line-height: 1.2em;
+}
+    
+/* ------- Main Sections ------- */
+#wrapper {/*styles wrapper content*/
+    height: 630px;
+    width: 1024px;
+    background: #9966ff;
+    position: relative;
+    border: groove #e3c431;
+    box-shadow: 2px 2px 4px black;
+}
+
+#heading {
+    width: 870px;
+    height: 100px;
+    font-family: harryp;
+    color: #e3c431;
+    font-size: 350%;
+    line-height: 1em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    z-index: 4;
+}
+
+#sidebar {
+    height:630px;
+    width: 154px;
+    background: url("images/navbar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 2;
+}
+
+#main {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 870px;
+    height: 530px;
+}
+
+#scroll {
+    width: 870px;
+    height: 530px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+    background-image: url(images/scroll.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+#classMenu{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height: 530px;
+    width: 870px;
+}
+
+#socMenu{
+    display: none;
+}
+
+#filter{
+    width: 870px;
+    height: 530px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#helpCanvas{
+    width: 100px;
+    height: 100px;
+}
+
+#playarea{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 1024px;
+    height: 630px;
+    background: url(images/game/table.jpg);
+    display: none;
+}
+
+.ui-dialog-titlebar{
+    display: none;
+}
+
+.ui-dialog-content{
+    border-style: none;
+}
+
+#charmStats{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    height: 455px;
+    width: 300px;
+    background-color: rgba(0, 160, 255, 0.5);
+    border: solid 5px white;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 13px
+}
+
+#classBar{
+    position:absolute;
+    top: 25px;
+    left: 10px;
+    display:none;
+    z-index: 6;
+    font-family: harryP;
+    color: #e3c431;
+}
+
+#classesMenu .ui-menu{
+    background: black;
+}
+
+#classesMenu .ui-menu-item{   
+    background: black;
+    border: groove #e3c431;
+    box-shadow: 2px 2px 4px black;
+}
+
+#houseBar{
+    position:absolute;
+    top: 25px;
+    left: 10px;
+    display:none;
+    z-index: 6;
+    font-family: harryP;
+    color: #e3c431;
+}
+
+#housesMenu .ui-menu{
+    background: black;
+}
+
+#housesMenu .ui-menu-item{   
+    background: black;
+    border: groove #e3c431;
+    box-shadow: 2px 2px 4px black;
+}
+
+/* ------- particles.js container ------- */
+
+#particles-js {
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 1024px;
+  height: 630px;
+  background-image: url("images/hogwarts.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 0.5;
+}
+
+/* ------- Text Content ------- */
+
+h1 {
+    color:#e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#content {
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    height: 485px;
+    width: 460px;
+    font-size: 20px;
+    line-height: 24px;
+    background-image: url(images/border2.png), url(images/border.png);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+}
+
+#aboutCharm {
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    height: 485px;
+    width: 460px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    background-image: url(images/border2.png), url(images/border.png);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+}
+
+#padout {
+    margin: 30px;
+    height: 425px;
+    overflow: scroll;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+#ravePoints{
+    color: white;
+    position: absolute;
+    left: 59%;
+    top:75%;
+    font-family: harryp;
+    text-shadow: 2px 2px 4px black;
+}
+
+#griffPoints{
+    color: white;
+    position: absolute;
+    left: 9%;
+    top:75%;
+    font-family: harryp;
+    text-shadow: 2px 2px 4px black;
+}
+
+#huffPoints{
+    color: white;
+    position: absolute;
+    left: 33%;
+    top:75%;
+    font-family: harryp;
+    text-shadow: 2px 2px 4px black;
+}
+
+#slyPoints{
+    color: white;
+    position: absolute;
+    left: 85%;
+    top:75%;
+    font-family: harryp;
+    text-shadow: 2px 2px 4px black;
+}
+
+#curriculumText{
+    display:none;
+}
+
+p.dropcap:first-letter { 
+	float: left;
+	line-height: 48px;
+	font-family: harryp;
+	font-size: 50px;
+	margin-right: 4px;
+}
+
+ul{
+    display: list-item;
+    list-style-image: url("images/scarbullet.png");
+    list-style-position: outside;
+}
+
+li{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#recipeList{
+    position:absolute;
+    bottom: 20px;
+    right: 160px;
+    height: 448px;
+    width: 280px;
+    background: url(images/recipeScroll.png);
+}
+#recipeList h2{
+    font-family: harryp;
+    font-size: 60px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#recipeList p{
+    font-family: harryp;
+    font-size: 40px;
+    margin: 10px;
+}
+
+#win{
+    position: absolute;
+    top:350px;
+    left: 0px;
+    width:800px;
+    text-align: center;
+    font-family: harryp;
+    font-size: 100px; 
+    color:#e3c431;
+    text-shadow: -4px -4px 4px #000, 4px 4px 4px #000;
+    z-index: 5;
+}
+
+#lose {
+    position: absolute;
+    top:350px;
+    left: 0px;
+    width:800px;
+    text-align: center;
+    font-family: harryp;
+    font-size: 100px; 
+    text-shadow: -4px -4px 4px #000, 4px 4px 4px #000;
+    z-index: 5;
+    color: red;
+}
+
+h4{
+    position: absolute;
+    top: 177px;
+    left:10px;
+    width: 270px;
+    font-family: harryp;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px white solid;
+    padding-left: 10px;
+    text-align: center;
+}
+
+#levStats{
+    position: absolute;
+    top: 230px;
+    left:10px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px white solid;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#levStats p{
+    
+    font-size: 15px;
+    line-height: 18px;
+    color: white;   
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+#bgChangeText{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 870px;
+    text-align: center;
+    font-family: harryp;
+    font-size: 90px;
+}
+
+#List {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    height: 485px;
+    width: 460px;
+    font-size: 20px;
+    color: dimgrey;
+    line-height: 24px;
+    padding-top: 20px;
+    background-image: url(images/border2.png), url(images/border.png);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+}
+
+#List p{
+    color: black;
+}
+
+
+/* ------- Images ------- */
+
+#crest {
+    height:150px;
+    position:absolute;
+    top: 5px;
+    left: 50px;
+}
+
+#slides {
+    height: 300px;
+    width: 350px; 
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    left: 10px;
+    background-color: rgba(150, 100, 0, 0.5);
+    border: groove #e3c431;
+}
+
+.imgs {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#snapeCardSprite{
+    position: absolute;
+    width: 159px;
+    height: 150px;
+    top: 10px;
+    left: 5px;
+    background-image: url(images/snapeSprite.png);
+    background-size: cover;
+    z-index: 3;
+}
+
+.barimg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 15px;
+    width: 200px;
+    border-radius: 13px;
+    
+}
+
+#cauldron {
+    position: absolute;
+    left: 220px;
+    top: 180px;
+    width: 350px;
+    height: 377px;
+    background: url(images/game/cauldronstart.png);
+}
+        
+#playarea div[data-thing="snake"] {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    height: 73px;
+    width: 200px;
+    background-image: url(images/game/snakeFang.png);
+}
+        
+#playarea div[data-thing="slugs"] {
+    position: absolute;
+    top: 260px;
+    left: 5px;
+    height: 133px;
+    width: 200px;
+    background-image: url(images/game/HornedSlug.png);
+}
+
+#playarea div[data-thing="quills"] {
+    position: absolute;
+    top: 455px;
+    left: 5px;
+    height: 103px;
+    width: 200px;
+    background-image: url(images/game/porcupineQuill.png);
+}
+
+#checkPoint{
+    position: absolute;
+    display:none;
+    top: 100px;
+    left: 360px;
+    height: 76px;
+    width: 68px;
+}
+
+#levCharm{
+    position: absolute;
+    top: 20px;
+    left: 81.5px;
+}
+
+#featherCharm{
+    margin: 30px;
+    border: 3px solid #e3c431;
+    box-shadow: 2px 2px 4px #000000; 
+}
+
+/* ------- Videos ------- */
+
+#videoshow{
+    position: absolute;
+    height: 300px;
+    width: 350px; 
+    top: 180px;
+    left: 10px;
+    object-fit: fill;
+    border: groove #e3c431;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+/* ------- Backgrounds ------- */
+
+#redcol{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 217.5px;
+    height: 630px;
+    background: #d22127;
+    display: none;
+}
+
+#yellowcol{
+    position:absolute;
+    top: 0px;
+    left: 217.5px;
+    width: 217.5px;
+    height: 630px;
+    background: #e3c431;
+    display: none;
+}
+
+#bluecol{
+    position:absolute;
+    top: 0px;
+    left: 435px;
+    width: 217.5px;
+    height: 630px;
+    background: #087fa9;
+    display: none;
+}
+
+#greencol{
+    position:absolute;
+    top: 0px;
+    left: 652.5px;
+    width: 371.5px;
+    height: 630px;
+    background: #4ab44a;
+    display: none;
+}
+
+#smallScroll{
+    position: absolute;
+    top:155.5px;
+    left:0px;
+    height: 315px;
+    width: 870px;
+    background-image: url(images/thinscroll.png);
+    background-repeat: no-repeat;
+    background-size: stretch;
+    display: none;
+}
+
+#redsquare{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 435px;
+    height: 315px;
+    background: #d22127;
+    display: none;
+}
+
+#greensquare{
+    position:absolute;
+    top: 0px;
+    left: 435px;
+    width: 589px;
+    height: 315px;
+    background: #4ab44a;
+    display: none;
+}
+
+#yellowsquare{
+    position:absolute;
+    top: 315px;
+    left: 0px;
+    width: 435px;
+    height: 315px;
+    background: #e3c431;
+    display: none;
+}
+
+#bluesquare{
+    position:absolute;
+    top: 315px;
+    left: 435px;
+    width: 589px;
+    height: 315px;
+    background: #087fa9;
+    display: none;
+}
+
+#soundBtn{
+	position:absolute;
+	color:white;
+	border:solid;
+	border-color:white;
+	border-width:1px;
+}
+
+#calendar{
+	position:absolute;
+	background-image:url(images/calendar/hpCalendar.gif);
+	width:300px;
+	height:238px;
+	top:120px;
+	left:30px;
+}
+
+#calendarImage{
+    border: groove #e3c431;
+    box-shadow: 2px 2px 4px black;
+}
+
+#hogMap{
+	width:870px;
+	height:520px;
+	position:absolute;
+	top:20px;
+	z-index:1000;
+}
+
+#mapCastle{
+	position:absolute;
+	top:20px;
+}
+
+#closeVideo{
+	position:absolute;
+    height: 630px;
+    width: 1024px;
+	z-index:2000;
+	top:-100px;
+}
+
+#presentVideo{
+	position:absolute;
+	height:400px;
+	width:600px;
+	left:150px;
+	top:50px;
+    border: groove #e3c431;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px black;
+}
+
+#quidTouch{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:250px;
+	height:150px;
+}
+#lakeTouch{
+	position:absolute;
+	top:350px;
+	left:600px;
+	width:250px;
+	height:150px;
+}
+#hallTouch{
+	position:absolute;
+	top:0px;
+	left:300px;
+	width:300px;
+	height:150px;
+}
+#forestTouch{
+	position:absolute;
+	top:250px;
+	left:0px;
+	width:250px;
+	height:250px;
+}
+
+#forest{
+	width:870px;
+	height:520px;
+	position:absolute;
+	bottom:0px;
+}
+#hall{
+	width:870px;
+	height:520px;
+	position:absolute;
+	bottom:0px;
+}
+#lake{
+	width:870px;
+	height:520px;
+	position:absolute;
+	bottom:0px;
+}
+#quid{
+	width:870px;
+	height:520px;
+	position:absolute;
+	bottom:0px;
+}
+
+.bar{
+    position: absolute;
+    bottom: 20px;
+    height: 15px;
+    width: 200px;
+    border-radius: 13px;
+    border: black solid 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bar div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    width: 50%;
+    border-radius: 13px;
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+.bar div:nth-child(1) {
+}
+
+.bar div:nth-child(2) {
+    top: 4.5px;
+    bottom: 4.5px;
+}
+
+#griffBar{
+    left: 8.5px;    
+}
+
+#huffBar{
+    left: 226px;
+}
+
+#raveBar{
+    left: 443.5px;
+}
+
+#slyBar{
+    left: 661px;
+}
+
+#griffBarProg{
+    left: 8.5px;    
+}
+
+#huffBarProg{
+    left: 226px;
+}
+
+#raveBarProg{
+    left: 443.5px;
+}
+
+#slyBarProg{
+    left: 661px;
+}
+
+/* ------- Converter ---- */
+
+#formTitle {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 870px;
+    text-align: center;
+    font-family: harryP;
+    font-size: 50px;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px black;
+}
+
+.label, .input{
+    width: 150px;
+    text-align: right;
+    font-family: harryP;
+    color: black;
+    font-size: 40px;
+}
+.input{
+    border: groove #e3c431;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    text-align: left;
+}
+
+#galleonLabel{
+    position: absolute;
+    top: 90px;
+    left: 10px;
+}
+#galleonInput{
+    position: absolute;
+    top: 90px;
+    left: 165px;
+}
+
+#sickleLabel{
+    position: absolute;
+    top: 190px;
+    left: 10px;
+}
+#sickleInput{
+    position: absolute;
+    top: 190px;
+    left: 165px;
+}
+
+#knutLabel{
+    position: absolute;
+    top: 290px;
+    left: 10px;
+}
+#knutInput{
+    position: absolute;
+    top: 290px;
+    left: 165px;
+}
+
+#poundLabel{
+    position: absolute;
+    top: 140px;
+    left: 420px;
+}
+#poundInput{
+    position: absolute;
+    top: 140px;
+    left: 575px;
+}
+
+#penceLabel{
+    position: absolute;
+    top: 240px;
+    left: 420px;
+}
+#penceInput{
+    position: absolute;
+    top: 240px;
+    left: 575px;
+}
+
+#wizToMug, #mugToWiz, #clear{
+    height: 50px;
+    width: 150px;
+    font-family: harryP;
+    font-size: 20px;
+    color: #e3c431;
+    background:black;
+    border: outset #e3c431;
+    box-shadow: 2px 2px 4px black;
+}
+#wizToMug{
+    position: absolute;
+    top: 430px;
+    left: 190px;
+} 
+#mugToWiz{
+    position: absolute;
+    top: 430px;
+    left: 530px;
+}
+#wizToMug:hover, #wizToMug:active{
+    border: inset #e3c431;
+    box-shadow: -1px -1px 4px black;
+} 
+#mugToWiz{
+    position: absolute;
+    top: 430px;
+    left: 530px;
+}
+#mugToWiz:hover, #mugToWiz:active{
+    border: inset #e3c431;
+    box-shadow: -1px -1px 4px black;
+} 
+#clear{
+    position: absolute;
+    top: 430px;
+    left: 360px;
+}
+#clear:hover, #clear:active{
+    border: inset #e3c431;
+    box-shadow: -1px -1px 4px black;
+} 
+
+#converted{
+    position: absolute;
+    top: 370px;
+    left: 0px;
+    width: 870px;
+    text-align: center;
+    font-family: harryP;
+    color: black;
+    font-size: 40px
+}
+
+
+/* ------- Buttons ------- */
+
+button{
+    background-color: rgba(0,0,0,0);
+    border: none;   
+}
+
+#griffCup {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    height:145px;
+    width:89px;
+    background-image: url(images/griffCup.png)
+}
+#griffCup:hover, #griffCup:active { 
+    background-image: url(images/griffCupGlow.png);
+}
+
+#huffCup {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    height:145px;
+    width:89px;
+    background-image: url(images/huffCup.png)
+}
+#huffCup:hover, #huffCup:active { 
+    background-image: url(images/huffCupGlow.png);
+}
+
+#potionsBook {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    height:150px;
+    width:97px;
+    background-image: url(images/potionBook.png)
+}
+#potionsBook:hover, #potionsBook:active { 
+    background-image: url(images/potionBookGlow.png);
+}
+
+#slithCup {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    height:145px;
+    width:89px;
+    background-image: url(images/slithCup.png)
+}
+#slithCup:hover, #slithCup:active { 
+    background-image: url(images/slithCupGlow.png);
+}
+
+#ravenCup {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    height:145px;
+    width:89px;
+    background-image: url(images/ravenCup.png)
+}
+#ravenCup:hover, #ravenCup:active { 
+    background-image: url(images/ravenCupGlow.png);
+}
+
+#houseCup {
+    position: absolute;
+    top: 235px;
+    left: 285px;
+    height:160px;
+    width:300px;
+    background-image: url(images/houseCup.png);
+    z-index: 3;
+}
+#houseCup:hover, #houseCup:active { 
+    background-image: url(images/houseCupGlow.png);
+}
+
+#homeBtn{
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    background-image: url(images/hogCrest.png);
+    height: 133px;
+    width: 120px;
+}
+#homeBtn:hover, #homeBtn:active { 
+    background-image: url(images/hogCrestGlow.png);
+}
+
+#houseBtn{
+    position: absolute;
+    top: 23px;
+    left: 55.5px;
+    background-image: url(images/houseBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#houseBtn:hover, #houseBtn:active { 
+    background-image: url(images/houseGlow.png);
+}
+
+#spellBookBtn{
+    position: absolute;
+    top: 154px;
+    left: 9px;
+    font-family: harryp;
+    color: aliceblue;
+    font-size: 30px;
+    width: 120px;
+    height:50px;
+    padding: 0px;
+    padding-bottom: 20px;
+    border-bottom: #e3c431 3px solid;
+}
+
+#potionBookBtn{
+    position: absolute;
+    top: 234px;
+    left: 9px;
+    font-family: harryp;
+    color: aliceblue;
+    font-size: 30px;
+    width: 120px;
+    height:50px;
+    padding: 0px;
+    padding-bottom: 20px;
+    border-bottom: #e3c431 3px solid;
+}
+
+#settingsBtn{
+    position: absolute;
+    top: 314px;
+    left: 9px;
+    font-family: harryp;
+    color: aliceblue;
+    font-size: 30px;
+    width: 120px;
+    height:50px;
+    padding: 0px;
+    padding-bottom: 20px;
+    border-bottom: #e3c431 3px solid;
+}
+
+#classBtn{
+    position: absolute;
+    top: 23px;
+    left: 327px;
+    background-image: url(images/classBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#classBtn:hover, #classBtn:active { 
+    background-image: url(images/classGlow.png);
+}
+
+#societyBtn{
+    position: absolute;
+    top: 23px;
+    left: 598.5px;
+    background-image: url(images/societiesBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#societyBtn:hover, #societyBtn:active { 
+    background-image: url(images/societiesGlow.png);
+}
+
+#mapBtn{
+    position: absolute;
+    top: 276.5px;
+    left: 55.5px;
+    background-image: url(images/mapBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#mapBtn:hover, #mapBtn:active { 
+    background-image: url(images/mapGlow.png);
+}
+
+#eventBtn{
+    position: absolute;
+    top: 276.5px;
+    left: 327px;
+    background-image: url(images/eventsBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#eventBtn:hover, #eventBtn:active { 
+    background-image: url(images/eventsGlow.png);
+}
+
+#wikiBtn{
+    position: absolute;
+    top: 276.5px;
+    left: 598.5px;
+    background-image: url(images/wizBtn.png);
+    height: 230px;
+    width: 216px;
+}
+#wikiBtn:hover, #wikiBtn:active { 
+    background-image: url(images/wizGlow.png);
+}
+
+#huffBtn{
+    position: absolute;
+    top: 36px;
+    left: 20px;
+    background-image: url(images/huffBtn.png);
+    height: 253px;
+    width: 395px;
+}
+#huffBtn:hover, #huffBtn:active { 
+    background-image: url(images/huffGlow.png);
+}
+
+#griffBtn{
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    background-image: url(images/griffBtn.png);
+    height: 253px;
+    width: 395px;
+}
+#griffBtn:hover, #griffBtn:active { 
+    background-image: url(images/griffGlow.png);
+}
+
+#slithBtn{
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    background-image: url(images/slithBtn.png);
+    height: 253px;
+    width: 395px;
+}
+#slithBtn:hover, #slithBtn:active { 
+    background-image: url(images/slithGlow.png);
+}
+
+#ravenBtn{
+    position: absolute;
+    top: 36px;
+    left: 20px;
+    background-image: url(images/ravenBtn.png);
+    height: 253px;
+    width: 395px;
+}
+#ravenBtn:hover, #ravenBtn:active { 
+    background-image: url(images/ravenGlow.png);
+}
+
+#griffPointsBtn {
+	position : absolute;
+	top: 10px;
+	left: 0px;
+	background-image: url(images/griffPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+}
+#huffPointsBtn {
+	position : absolute;
+	top: 10px;
+	left: 220px;
+	background-image: url(images/huffPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+}
+
+#ravePointsBtn {
+	position : absolute;
+	top: 10px;
+	left: 436.5px;
+	background-image: url(images/ravePointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+}
+
+#slyPointsBtn {
+	position : absolute;
+	top: 10px;
+	left: 653px;
+	background-image: url(images/slyPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+}
+
+#potionsBtn{
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    background-image: url(images/potionsBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#potionsBtn:hover, #potionsBtn:active { 
+    background-image: url(images/potionsGlow.png);
+}
+
+#herbologyBtn{
+    position: absolute;
+    top: 5px;
+    left: 222px;
+    background-image: url(images/herbologyBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#herbologyBtn:hover, #herbologyBtn:active { 
+    background-image: url(images/herbologyGlow.png);
+}
+
+#charmsBtn{
+    position: absolute;
+    top: 5px;
+    left: 438px;
+    background-image: url(images/charmsBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#charmsBtn:hover, #charmsBtn:active { 
+    background-image: url(images/charmsGlow.png);
+}
+
+#transfigBtn{
+    position: absolute;
+    top: 5px;
+    left: 654px;
+    background-image: url(images/transfigurationBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#transfigBtn:hover, #transfigBtn:active { 
+    background-image: url(images/transfigurationGlow.png);
+}
+
+#flyingBtn{
+    position: absolute;
+    top: 267.5px;
+    left: 6px;
+    background-image: url(images/flyingBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#flyingBtn:hover, #flyingBtn:active { 
+    background-image: url(images/flyingGlow.png);
+}
+
+#historyBtn{
+    position: absolute;
+    top: 267.5px;
+    left: 222px;
+    background-image: url(images/historyBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#historyBtn:hover, #historyBtn:active { 
+    background-image: url(images/historyGlow.png);
+}
+
+#astronomyBtn{
+    position: absolute;
+    top: 267.5px;
+    left: 438px;
+    background-image: url(images/astronomyBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#astronomyBtn:hover, #astronomyBtn:active { 
+    background-image: url(images/astronomyGlow.png);
+}
+
+#datdaBtn{
+    position: absolute;
+    top: 267.5px;
+    left: 654px;
+    background-image: url(images/datdaBtn.png);
+    height: 233px;
+    width: 190px;
+    display: none;
+}
+#datdaBtn:hover, #datdaBtn:active { 
+    background-image: url(images/datdaGlow.png);
+}
+
+#gobBtn{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    display: none;
+    background: url(images/gobstones.jpg);
+    width: 140px;
+    height: 175px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#gobDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#spewBtn{
+    position: absolute;
+    top: 25px;
+    left: 250px;
+    display: none;
+    background: url(images/spew.jpg);
+    width: 150px;
+    height: 213px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#spewDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#quidBtn{
+    position: absolute;
+    top: 150px;
+    left: 440px;
+    display: none;
+    background: url(images/quidditch.jpg);
+    width: 130px;
+    height: 231px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#quidDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#slugBtn{
+    position: absolute;
+    top: 260px;
+    left: 600px;
+    display: none;
+    background: url(images/slugclub.jpg);
+    width: 140px;
+    height: 130px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#slugDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#dArmyBtn{
+    position: absolute;
+    top: 0px;
+    left: 580px;
+    display: none;
+    background: url(images/dumbledoresarmy.jpg);
+    width: 190px;
+    height: 190px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#dArmyDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#wizCardBtn{
+    position: absolute;
+    top: 190px;
+    left: 95px;
+    display: none;
+    background: url(images/cardsclub.jpg);
+    width: 140px;
+    height: 230px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#wizCardDialog{
+    font-family: harryp;
+    font-size: 40px;
+    text-align: center;
+    color: #e3c431;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#curriculum{
+    font-family: harryp;
+    font-size: 40px;
+    width:50%;
+    color: black;
+    border: black solid 1px;
+    box-shadow: 2px 2px 4px #000000;
+    padding-bottom: 2px;
+}
+#curriculum:hover, #curriculum:active { 
+    text-shadow: -2px -2px 4px #fff,2px 2px 4px #fff;
+}
+
+#about{
+    font-family: harryp;
+    font-size: 40px;
+    width:50%;
+    color: rgba(0, 0, 0, 0.5);
+    border: black solid 1px;
+    box-shadow: 2px 2px 4px black;
+    padding-bottom: 2px;
+}
+#about:hover, #about:active { 
+    text-shadow: -2px -2px 4px #fff,2px 2px 4px #fff;
+}
+
+#close{
+    width: 870px;
+    height: 530px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 4;
+}
+
+#helpBtn{
+    position: absolute;
+    top: 10px;
+    right: 164px;
+    font-family: harryp;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    width:60px;
+    height: 60px;
+    background: url(images/circle.png);
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+#helpDialog{
+    width: 600px;
+    height: 450px;
+    padding: 0;
+    z-index: 5;
+}
+
+#resetBtn{
+    position:absolute;
+    bottom: 10px;
+    left: 60px;
+    font-family: harryp;
+    font-size: 100px; 
+    color:#e3c431;
+    text-shadow: -2px -2px 4px #000, 2px 2px 4px #000;
+    z-index: 5;
+}
+#resetBtn:hover, #resetBtn:active { 
+    text-shadow: -2px -2px 4px #fff,2px 2px 4px #fff;
+}
+
+#gryffBg {
+	position : absolute;
+	top: 150px;
+	left: 0px;
+	background-image: url(images/griffPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+    z-index: 4;
+}
+#redBG{
+    position: absolute;
+    top: 370px;
+	left: 0px;
+    width: 210px;
+    font-family: harryp;
+    color: #d22127;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#huffBg {
+	position : absolute;
+	top: 150px;
+	left: 220px;
+	background-image: url(images/huffPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+    z-index: 4;
+}
+#yellowBG{
+    position: absolute;
+    top: 370px;
+    left: 220px;
+    width: 210px;
+    font-family: harryp;
+    color: #e3c431;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#raveBg {
+	position : absolute;
+	top: 150px;
+	left: 436.5px;
+	background-image: url(images/ravePointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+    z-index: 4;
+}
+#blueBG{
+    position: absolute;
+    top: 370px;
+    left: 436.5px;
+    width: 210px;
+    font-family: harryp;
+    color: #087fa9;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#slithBg{
+	position : absolute;
+	top: 150px;
+	left: 653px;
+	background-image: url(images/slyPointsBtn.png);
+	background-size: cover;
+	height: 215px;
+	width: 210px;
+    z-index: 4;
+}
+#greenBG{
+    position: absolute;
+    top: 370px;
+    left: 653px;
+    width: 210px;
+    font-family: harryp;
+    color: #4ab44a;
+    font-size: 40px;
+    text-align: center; 
+    text-shadow: 2px 2px 4px #000;
+}
+
+#boilsBtn{
+    color: black;
+    font-size: 20px;
+}
+#boilsBtn:hover, #boilsBtn:active{
+    text-shadow: 0 0 5px white;
+}
+
+#leviBtn{
+    color: black;
+    font-size: 20px;
+}
+#leviBtn:hover, #leviBtn:active{
+    text-shadow: 0 0 5px white;
+}
+
+#prevBtn{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-family: harryP;
+    font-size: 50px;
+    color: black;
+    z-index: 5;
+}
